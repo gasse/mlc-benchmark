@@ -4,3 +4,6 @@ figures
 ilf
 log
 preds
+.Rproj.user
+*.Rproj
+README.html

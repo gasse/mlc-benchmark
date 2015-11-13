@@ -116,22 +116,36 @@ plots the distribution of the size of the label factors output by ILF-Compo, for
 The default parameters to configure the benchmark can be changed in *00.main.R*
 
 ``` R
-conf.seed = 1 # fixed seed for reproducibility (default 1)
-conf.nb.cores = 2 # number of jobs to run in parallel (based on the CV splits) (default 2)
+# fixed seed for reproducibility
+conf.seed = 1
 
-conf.nb.cv = 2 # number of cross-validation splits (default 2)
-conf.nb.cv.reps = 5 # number of cross-validation repetitions (default 5)
+# number of jobs to run in parallel
+conf.nb.cores = 2
 
-conf.fss = "iamb.sp-mi.pr0.a0.0001" # method to perform FSS in "02.extract.mbs.in.x" (look at the file "00.includes" for more details)
-conf.labels.ci = "ci.sp-mi.pr0.a0.0001" # method to perform CI testing in "03.extract.ilf" (look at the file "00.includes" for more details)
+# number of cross-validation splits / repetitions
+conf.nb.cv = 2 
+conf.nb.cv.reps = 5
 
-conf.base.learner = "rf" # base classifier to compare BR, LP and ILF-Compo, may be one of "rf" (randomForest), "erf" (extraTrees), "svm" (e1071), "smo" (Weka)
+# FSS method used in "02.extract.mbs.in.x.R"
+# (look at the file "00.includes.R" for more details)
+conf.fss = "iamb.sp-mi.pr0.a0.0001"
 
-conf.plot = "png" # output format for the figures, may be one of "png" or "eps" 
+# CI testing method used in "03.extract.ilf.R"
+# (look at the file "00.includes.R" for more details)
+conf.labels.ci = "ci.sp-mi.pr0.a0.0001"
 
-conf.dbs = c("emotions", "image", "scene") # which datasets to use for the benchmark
+# base classifier to compare BR, LP and ILF-Compo
+# may be one of "rf" (randomForest), "erf" (extraTrees), "svm" (e1071), "smo" (Weka)
+conf.base.learner = "rf"
 
-conf.dbs.x2 = c("emotions", "image", "scene") # which datasets to use for the duplicated benchmark
+# which datasets to use for the benchmark / the duplicated benchmark
+conf.dbs = c("emotions", "image", "scene") 
+conf.dbs.x2 = c("emotions", "image", "scene")
 
-conf.log = TRUE # enable / disable log
+# output format for the figures
+# may be one of "png" or "eps" 
+conf.plot = "png"
+
+# enable / disable log
+conf.log = TRUE
 ```
