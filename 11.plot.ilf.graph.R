@@ -75,10 +75,10 @@ for (db in conf.dbs) {
             
             main = sprintf("ilf-%s - %s\n%s / %s", f, db, mb.m, ci.m)
             
-            if (plot == "png") {
+            if (conf.plot == "png") {
               png(sprintf("%s.png", out.file), width = 2*480, height = 2*480)
             }
-            else if (plot == "eps") {
+            else if (conf.plot == "eps") {
               postscript(sprintf("%s.eps", out.file), horizontal=FALSE, pointsize=1/(1200), paper="special", width=10, height=10)
             }
             
